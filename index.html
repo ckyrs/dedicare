@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARA MI AMADA</title>
+    <style>
+        /* Global styling */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f8e4e3;
+            color: #4b4b4b;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://www.publicdomainpictures.net/pictures/30000/velka/vintage-paper-background-1351676020me1.jpg');
+            background-size: cover;
+            background-position: center;
+            transition: background-color 1s ease, background-image 1s ease;
+        }
+
+        /* Container for slides */
+        .container {
+            text-align: center;
+            width: 80%;
+            max-width: 900px;
+            padding: 20px;
+            border: 2px solid #d4a373;
+            border-radius: 15px;
+            background: rgba(255, 250, 240, 0.9);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Slide styling */
+        .slide {
+            display: none;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #slide1 {
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #c77f56;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #6e4b3d;
+            text-align: left;
+            margin-top: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tombol dengan efek hover */
+        .btn {
+            padding: 12px 24px;
+            font-size: 1.2em;
+            background-color: #c77f56;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #e5a46e;
+            transform: scale(1.05);
+        }
+
+        /* Animasi tambahan */
+        .slide.fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Animasi Fade-In */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1 -->
+        <div id="slide1" class="slide">
+            <h1>Today, i crave your kiss and your warm embrace.</h1>
+            <button class="btn" onclick="playMusicAndShowSlide2()">SUREE!!!!</button>
+            <button class="btn" onclick="showSlide1()">EW NO.</button>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div id="slide2" class="slide fade-in">
+            <h1>Happy 1st Anniversary</h1>
+            <p>
+                Ketika aku mulai mencintaimu, <br>
+                mataku tertutup oleh kabut rasa, <br>
+                tanganku terikat oleh harapan, <br>
+                dan telingaku sunyi, hanya gema hatimu yang kudengar. <br><br>
+
+                Mungkin benar kata bijak, <br>
+                "Cinta itu buta dan tuli". <br>
+                Namun, tuntunlah aku, <br>
+                Kasih ajarkan mataku melihat terang, <br>
+                ajarkan telingaku mendengar kebenaran, <br>
+                agar ku tahu kemana langkah ini menuju. <br><br>
+
+                Hari demi hari, kita mendaki bersama, <br>
+                kudamba tanjakan ini takkan pernah melandai. <br>
+                Ku harap perjalanan seterusnya dan selamanya, <br>
+                tidak ada rasa menorehkan luka. <br><br>
+
+                Bila saatnya kita menyentuh puncak, <br>
+                biarkanlah kita tetap bergandeng tangan, <br>
+                menatap dunia dari mahkota tertinggi, <br>
+                dan menuliskan cerita yang abadi.
+            </p>
+            <button class="btn" onclick="showSlide3()">LEE GOO!!!</button> <!-- Button to go to Slide 3 -->
+        </div>
+
+        <!-- Slide 3 -->
+        <div id="slide3" class="slide fade-in">
+            <h1>The portait of us.</h1>
+            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                <img src="c:\Users\almer zakie anwary\Downloads\Gambar WhatsApp 2024-12-15 pukul 04.09.58_29daee4a.jpg" alt="Photo 1" style="width: 30%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <img src="c:\Users\almer zakie anwary\Downloads\Gambar WhatsApp 2024-12-15 pukul 04.09.29_a00ad3d7.jpg" alt="Photo 2" style="width: 30%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <img src="c:\Users\almer zakie anwary\Downloads\Gambar WhatsApp 2024-12-15 pukul 04.08.58_811fa276.jpg" alt="Photo 3" style="width: 30%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            </div>
+            <button class="btn" onclick="showSlide2()">GO BACKK</button> <!-- Button to go back to Slide 2 -->
+        </div>
+    </div>
+
+    <!-- Audio Player for Blue by Yung Kai -->
+    <audio id="backgroundMusic" loop>
+        <source src="blue.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Fungsi untuk memulai musik saat tombol pertama diklik
+        function playMusicAndShowSlide2() {
+            var music = document.getElementById("backgroundMusic");
+            music.play(); // Mulai memutar lagu
+
+            document.getElementById("slide1").style.display = "none"; // Sembunyikan slide pertama
+            var slide2 = document.getElementById("slide2");
+            slide2.style.display = "block"; // Tampilkan slide kedua
+            slide2.classList.add("fade-in"); // Tambahkan efek fade-in
+        }
+
+        // Fungsi untuk menampilkan kembali slide pertama
+        function showSlide1() {
+            document.getElementById("slide2").style.display = "none"; // Sembunyikan slide kedua
+            document.getElementById("slide1").style.display = "block"; // Tampilkan slide pertama
+        }
+
+        // Fungsi untuk menampilkan slide 3
+        function showSlide3() {
+            document.getElementById("slide2").style.display = "none"; // Sembunyikan slide 2
+            document.getElementById("slide3").style.display = "block"; // Tampilkan slide 3
+        }
+
+        // Fungsi untuk menampilkan slide 2 kembali
+        function showSlide2() {
+            document.getElementById("slide3").style.display = "none"; // Sembunyikan slide 3
+            document.getElementById("slide2").style.display = "block"; // Tampilkan slide 2
+        }
+    </script>
+</body>
+</html>
